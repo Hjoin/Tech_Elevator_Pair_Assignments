@@ -1,0 +1,253 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #87CEEB;
+}
+
+nav ul {
+    margin: 0;
+    padding: 20px 0 0 0;
+}
+
+nav ul li {
+    list-style: none;
+    width: 30%;
+    background-color: #00afef;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+}
+
+.get-refreshed nav li {
+    list-style: none;
+    width: 30%;
+    background-color: #00afef;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+}
+
+header img {
+    height: 100px;
+    width: auto;
+}
+header h1 {
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+
+
+main li:before {
+    content: '🍡';
+    margin-left: -31px;
+    padding-right: 8px;
+}
+
+main li{
+    list-style-type: none ;
+}
+
+main, section, footer {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+}
+main {
+    display: flex;
+    grid-area: main;
+}
+.store-button { /* used for store link in "Get refreshed" section */
+    width: 25%;
+    padding: 10px;
+    border-radius: 5px;
+    color: #000000;
+    background-color: #00afef;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    grid-area: header;
+    background-color: #87CEEB;
+}
+
+ nav ul{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.get-refreshed > nav {
+    width: 25%;
+}
+
+
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "header  header-nav"
+    "main main"
+    "popsicle-race get-refreshed"
+    "footer footer";
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.popsicle-race{
+    display: flex;
+    grid-area: popsicle-race;
+}
+
+.popsicle-race-content{
+    text-align: center;
+}
+
+.get-refreshed{
+    display: flex;
+    grid-area: get-refreshed;
+    flex-direction: column;
+    align-items: center;
+}
+.get-refreshed nav {
+    width:100%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.did-you-know{
+    justify-content: center;
+    align-content: center;
+      width: 67%;
+      display: flex;
+      flex-direction: column;
+      
+    
+}
+main {
+    display: flex;
+}
+
+main img {
+    object-fit: cover;
+    margin-right: 20px;
+    height: 100%;
+    width: 100%;
+    flex-grow: 1;
+
+} 
+.main-image{
+ 
+    width: 33%;
+    
+}
+
+li{
+    margin: 10px;
+}
+
+footer{
+    grid-area: footer;
+}
+
+#contact-form{
+    display: flex;
+    flex-direction: column;
+    line-height: 1.50rem;
+    justify-content: space-between;
+}
+
+#comments{
+    width:25%;
+    height:15vh;
+}
+
+
+#name, 
+#heardAboutUs,
+#favoriteColor{
+    width:20%;
+   
+}
+
+#submit-button{
+    width: 15%;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff;
+    background-color: #00afef;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+#submit-button:hover,
+.store-button:hover,
+nav ul li:hover {
+    background-color: yellowgreen;
+}
+
+section > ul {
+    margin-top: 0px;
+}
+
+@media screen and (max-width: 800px){
+
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "header-nav"
+    "main"
+    "popsicle-race"
+    "get-refreshed"
+    "footer";
+    row-gap: 20px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+}
+nav ul li{
+    font-size: 1 rem;
+}
+
+.main-image{
+ 
+    width: 88%;
+    height: 50vh;
+}
+
+.did-you-know{
+    width: 90%;
+    
+}
+
+#comments{
+    width:90%;
+    height:25vh;
+}
+
+
+#name, 
+#heardAboutUs,
+#favoriteColor{
+    width:90%;
+   
+}
+
+#submit-button{
+    width: 50%;
+    color: #ffffff;
+    background-color: #00afef;
+}
+}
